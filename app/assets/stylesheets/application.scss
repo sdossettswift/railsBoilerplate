@@ -1,2 +1,14 @@
 @import 'bootstrap-sprockets'; 
 @import 'bootstrap'; 
+
+.header{
+	height:10vh; 
+}
+
+.body{
+	min-height: 80vh; 
+}
+
+.footer{
+	height: 10vh; 
+}
