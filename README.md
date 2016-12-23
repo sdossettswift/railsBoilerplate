@@ -3,14 +3,23 @@
 ### Ahoy, there, friends of GitHub. Here is my Christmas gift to you (and myself, for that matter.)
 
 This is a boilerplate Rails app that is set up with the following opensource tools:
+
 1. Ruby 2.3.1
+
 2. Rails 5
+
 3. Postgres (for the database)
+
 4. Bootstrap (for basic stylin')
+
 5. Sass (to make it easier to give it real style)
+
 6. TravisCI (to run tests and automate deployment)
+
 7. Heroku (to deploy)
+
 8. User (that can log in/ log out)
+
 9. BCrypt (authentication)
 
  SimpleForm (to make forms...simple)
