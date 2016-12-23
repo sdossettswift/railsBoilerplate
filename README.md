@@ -50,8 +50,9 @@ This is a boilerplate Rails app that is set up with the following opensource too
 
 8. update the deploy section of the .travis.yml file to include
 
-	````run:
+	````
+	run:
 	 - "rake db:migrate"
 	 ````
-	 
+
 9. Make it your own by adding models, beefing up controllers, adding views, etc. 
