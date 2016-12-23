@@ -34,7 +34,7 @@ This is a boilerplate Rails app that is set up with the following opensource too
 
 *Here's how to get started:*
 
-1. fork it, clone it
+1. fork it, clone it, initiate a GH repo
 
 2. run 'gem install travis'
 
@@ -43,6 +43,8 @@ This is a boilerplate Rails app that is set up with the following opensource too
 4. run 'rails db:create'
 
 5. run 'rails db:migrate'
+
+6. push changes to GH; got to travisci.org and add your GH repository
 
 6. run 'heroku create app-name'
 
