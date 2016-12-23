@@ -44,17 +44,19 @@ This is a boilerplate Rails app that is set up with the following opensource too
 
 5. run 'rails db:migrate'
 
-6. push changes to GH; got to travisci.org and add your GH repository
+6. run 'rake' to test -- you should pass! 
 
-6. run 'heroku create app-name'
+7. push changes to GH; got to travisci.org and add your GH repository
 
-7. run 'travis setup heroku'
+8. run 'heroku create app-name'
 
-8. update the deploy section of the .travis.yml file to include
+9. run 'travis setup heroku'
+
+10. update the deploy section of the .travis.yml file to include
 
 	````
 	run:
 	 - "rake db:migrate"
 	 ````
 
-9. Make it your own by adding models, beefing up controllers, adding views, etc. 
+11. Make it your own by adding models, beefing up controllers, adding views, etc. 
