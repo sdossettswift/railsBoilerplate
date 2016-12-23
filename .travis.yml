@@ -1,8 +1,17 @@
 language: ruby
 rvm:
-  - 2.3.1
+- 2.3.1
 addons:
-  postgresql: "9.4"
+  postgresql: '9.4'
 before_script:
-  - psql -c 'create database travis_ci_test;' -U postgres
-  - cp config/database.yml.travis config/database.yml
+- psql -c 'create database travis_ci_test;' -U postgres
+- cp config/database.yml.travis config/database.yml
+deploy:
+  provider: heroku
+  api_key:
+    secure: jsjmUNKhaBYLGWysKbIws8upEtTg+RTwIZ73bFUbbiY0JgJGW9O3hqdQmxZUB5orSJxS6Fzv2JSYU3OumJHImJdXr6Hy8FODUkuSPUUFBV0/5viN8XmA04gTEXD4uLUgDO/NeKjMjLn8NbFu7JEZxaStadfFrpD7j9Iv84KFPX2zBsLMiZA7KAXwixJiyYcneuTYMLrB8A9DzqUkbcOaBSWX8BfGg0O/Nj5C8L3sWWLVrG14iqX38Amc1Y5mqHpQZgsTRZ9k6TDsAzmBwo8HugQiugptuSkobm+7dSNePQGR0/79x/0tATvsdZpQjglIhJ2DJqlVXRJ1RPxTwvQCZfeLUx3MNYhcsnqvZjlAdaAia0CA5tXATy9rDfgA0Bg0dXPIplFJZihB2IlEz4vj/IMc6YrWMlserXKLGKSvNjd2uHMaPU/24Q3WogKhaK5Uv8+ItiaPXfmjpMGqa325Ds8pmR0z32JkknPNN8HscgtubxwjsFpxZbqfhgrSQC4bp8RsrNwJlPdczFm2M2HmoOWqmFKpdIpd2xxuOm97Ves99DX5UB+wDNhzG4q5wekndytE8fgDWbrb6B0LelDDMwqCyURcKg+YJJcrMwZnPYpo0lXLy8A0HcQ4FyOtJjAzSgZC59zfBdDnKshtWYQKYHkiuox4Opi6AfWgnODm4yE=
+  app: rails-boilerplate-swift
+  on:
+    repo: sdossettswift/railsBoilerplate
+  run:
+    - "rails db:migrate"
