@@ -20,14 +20,14 @@ This is a boilerplate Rails app that is set up with the following opensource too
 Why? Because I find myself doing the same thing time after time. This boilerplate will save you at least 35 minutes. Or maybe like 5, but those 5 minutes add up. 
 
 Here's how to get started:
-1) fork it, clone it
-2) run 'gem install travis'
-3) run 'bundle install'
-4) run 'rails db:create'
-5) run 'rails db:migrate'
-6) run 'heroku create app-name'
-7) run 'travis setup heroku'
-8) update the deploy section of the .travis.yml file to include
-	run:
-	  - "rake db:migrate"
-9) Make it your own by adding models, beefing up controllers, adding views, etc. 
+1. fork it, clone it
+2. run 'gem install travis'
+3. run 'bundle install'
+4. run 'rails db:create'
+5. run 'rails db:migrate'
+6. run 'heroku create app-name'
+7. run 'travis setup heroku'
+8. update the deploy section of the .travis.yml file to include
+*	run:
+*	  - "rake db:migrate"
+9. Make it your own by adding models, beefing up controllers, adding views, etc. 
