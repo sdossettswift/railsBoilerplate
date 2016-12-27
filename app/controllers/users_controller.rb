@@ -8,17 +8,24 @@ class UsersController < ApplicationController
 
 	def create
 		@user = User.create(user_params)
-		if @user.save
-			#sign them in
-			session[:user_id] = @user.id
-			redirect_to root_path, alert: "Welcome! Your account has been created."
-			else
-			render :new, alert; "Try Again"
-		end
-	end
+
+    respond_to do |format|
+    if @user.save
+      session[:user_id] = @user.id
+      # Sends email to user when user is created.
+      ExampleMailer.sample_email(@user).deliver
+
+      format.html { redirect_to @user, notice: 'User was successfully created.' }
+      format.json { render :show, status: :created, location: @user }
+    else
+      format.html { render :new }
+      format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
 	def edit
-		
+
 	end
 
 	def update
@@ -30,7 +37,7 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		
+
 	end
 
 	def index

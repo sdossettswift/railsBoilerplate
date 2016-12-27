@@ -30,6 +30,8 @@ This is a boilerplate Rails app that is set up with the following opensource too
 
 13. Layout broken down into partials for header, notices, footer. 
 
+14. Figaro to manage environmental variables 
+
 *Why?* Because I find myself doing the same thing time after time. This boilerplate will save you at least 35 minutes. Or maybe like 5, but those 5 minutes add up. 
 
 *Here's how to get started:*
@@ -39,6 +41,8 @@ This is a boilerplate Rails app that is set up with the following opensource too
 2. run 'gem install travis'
 
 3. run 'bundle install'
+bundle exec figaro install (set environmental variables in production.rb,
+development.rb)
 
 4. run 'rails db:create'
 
