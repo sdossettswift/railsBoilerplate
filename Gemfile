@@ -34,17 +34,25 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
-
+#for database modeling; run rake erd
+gem 'rails-erd'
+#for bootstrap bliss
 gem 'bootstrap-sass'
+#icons are easy now
 gem 'font-awesome-rails'
+#because forms should be simple
 gem 'simple_form'
+#figaro to handle environmental variables
+gem 'figaro'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 gem 'minitest-rails'
 
 group :test do
-  gem "minitest-rails-capybara"
+  #for capybara testing
+  gem 'minitest-rails-capybara'
 end
 
 
@@ -54,6 +62,7 @@ group :development, :test do
 end
 
 group :production do
+  #to make heroku sing :)
   gem 'rails_12factor'
 end
 

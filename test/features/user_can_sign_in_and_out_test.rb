@@ -1,10 +1,11 @@
 require "test_helper"
 
 class UserCanSignInAndOutTest < Capybara::Rails::TestCase
-  setup do 
+  setup do
 		visit root_path
 		click_link "Sign Up"
 		fill_in "Username", with: "test"
+    fill_in "Email", with: "test@example.com"
 		fill_in "Password", with: "12345678"
 		fill_in "Password confirmation", with: "12345678"
 		click_button "Create User"
@@ -17,7 +18,7 @@ class UserCanSignInAndOutTest < Capybara::Rails::TestCase
 		fill_in "Username", with: "test"
 		fill_in "Password", with: "1234"
 		click_button "Sign In"
-		assert_content page, "Something is wrong with your username and/or password" 
+		assert_content page, "Something is wrong with your username and/or password"
 	end
 
 
