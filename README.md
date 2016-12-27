@@ -100,4 +100,9 @@ run:
  - "rake db:migrate"
 ````
 
+### Tell Figaro to setup production variables
+````
+figaro heroku:set -e production
+````
+
 ### Make it your own by adding models, beefing up controllers, adding views, etc.
