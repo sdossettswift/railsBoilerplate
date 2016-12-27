@@ -5,7 +5,7 @@ class UserCanSignInAndOutTest < Capybara::Rails::TestCase
 		visit root_path
 		click_link "Sign Up"
 		fill_in "Username", with: "test"
-    fill_in "Email", with: "test@example.com"
+    fill_in "Email", with: "sdossettswift@gmail.com"
 		fill_in "Password", with: "12345678"
 		fill_in "Password confirmation", with: "12345678"
 		click_button "Create User"

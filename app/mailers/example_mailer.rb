@@ -1,5 +1,5 @@
 class ExampleMailer < ApplicationMailer
-  default from:  ENV['gmail_user_name']
+  default from:  ENV['gmail_username']
 
   def sample_email(user)
     @user = user
