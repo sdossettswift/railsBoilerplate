@@ -28,39 +28,79 @@ This is a boilerplate Rails app that is set up with the following opensource too
 
 12. ERD ("entity relationship diagram" to make bomb @$$ charts of models)
 
-13. Layout broken down into partials for header, notices, footer. 
+13. Layout broken down into partials for header, notices, footer.
 
-14. Figaro to manage environmental variables 
+14. Figaro to manage environmental variables
 
-*Why?* Because I find myself doing the same thing time after time. This boilerplate will save you at least 35 minutes. Or maybe like 5, but those 5 minutes add up. 
+15. Active Mailer to send emails! -- this will send a sample email to the user upon the creation of their account. 
+
+*Why?* Because I find myself doing the same thing time after time. This boilerplate will save you at least 35 minutes. Or maybe like 5, but those 5 minutes add up.
 
 *Here's how to get started:*
 
 1. fork it, clone it, initiate a GH repo
 
-2. run 'gem install travis'
+2. Install TravisCI gem
+````
+gem install travis
+ ````
 
-3. run 'bundle install'
-bundle exec figaro install (set environmental variables in production.rb,
+3. Bundle the gems
+````
+bundle install
+ ````
+
+4. bundle exec figaro install (set environmental variables in production.rb,
 development.rb)
+````
+bundle exec figaro install
+ ````
 
-4. run 'rails db:create'
+ 4.a Add your gmail credentials to application.yml  (created above)
+````
+ gmail_domain: 'gmail.com'
+ gmail_username: 'username@gmail.com'
+ gmail_password: 'password'
+````
 
-5. run 'rails db:migrate'
 
-6. run 'rake' to test -- you should pass! 
+5. Create the database
+````
+rails db:create
+ ````
 
-7. push changes to GH; got to travisci.org and add your GH repository
+6. Migrate the Database
+````
+rails db:create
+ ````
 
-8. run 'heroku create app-name'
 
-9. run 'travis setup heroku'
+7. Run the tests
+````
+rake
+ ````
 
-10. update the deploy section of the .travis.yml file to include
+
+8. push changes to GH; got to travisci.org and add your GH repository
+````
+git push -u origin master
+ ````
+
+9. Create the app in Heroku (this assumes you have installed the Heroku CLI and have set up an account, etc.)
+````
+heroku create app-name
+````
+
+10. Tell Travis to deploy to Heroku
+````
+travis setup heroku
+````
+
+11. update the deploy section of the .travis.yml file to include
 
 	````
 	run:
 	 - "rake db:migrate"
 	 ````
 
-11. Make it your own by adding models, beefing up controllers, adding views, etc. 
+12. Make it your own by adding models, beefing up controllers, adding views, etc.
