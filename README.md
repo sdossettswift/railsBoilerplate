@@ -95,10 +95,9 @@ travis setup heroku
 ````
 
 ### update the deploy section of the .travis.yml file to include
-
-	````
-	run:
-	 - "rake db:migrate"
-	 ````
+````
+run:
+ - "rake db:migrate"
+````
 
 ### Make it your own by adding models, beefing up controllers, adding views, etc.
