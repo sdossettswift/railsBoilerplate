@@ -26,7 +26,7 @@ This is a boilerplate Rails app that is set up with the following opensource too
 
 11. Minitest & Capybara (for testing bliss)
 
-12. ERD ("entity relationship diagram" to make bomb @$$ charts of models)
+12. ERD ("entity relationship diagram" to make charts of models)
 
 13. Layout broken down into partials for header, notices, footer.
 
@@ -36,9 +36,18 @@ This is a boilerplate Rails app that is set up with the following opensource too
 
 *Why?* Because I find myself doing the same thing time after time. This boilerplate will save you at least 35 minutes. Or maybe like 5, but those 5 minutes add up.
 
+(Assumptions: You are already set up with :git/github, hub, heroku, traivsCI, ruby 2.3, rails 5, postgres) 
+
 *Here's how to get started:*
 
 ### fork it, clone it, initiate a GH repo
+```
+git clone git@github.com:sdossettswift/railsBoilerplate.git nameOfLocalFolderYouWantToCreate
+
+git remove origin 
+
+hub create RepoName
+```
 
 ### Install TravisCI gem
 ````
